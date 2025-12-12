@@ -1,0 +1,8 @@
+fastapi
+sqlalchemy
+pydantic
+hypercorn
+typer
+dotenv
+psycopg==3.2.9
+psycopg-binary==3.2.9
