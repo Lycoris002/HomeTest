@@ -19,7 +19,7 @@ POSTGRES_PORT = get_config(key="POSTGRES_PORT", default="5432")
 
 # JWT SETTINGS
 JWT_SECRET = get_config(key="JWT_SECRET", default="change-this-secret-in-prod")
-# Use HS256 by default
+# Use HS256 Hashing Algorithm
 JWT_ALGORITHM = get_config(key="JWT_ALGORITHM", default="HS256")
 # Token expiration in 1 hour
 try:

@@ -8,10 +8,11 @@ from middlewares.authentication import verify_token
 router = APIRouter()
 
 # Authentication
-router.include_router(auth_api, tags=["Authentication"])
+router.include_router(auth_api, prefix="/auth", tags=["Authentication"])
 
 # File Processing
-router.include_router(file_api, tags=["Files"], dependencies=[Depends(verify_token)])
+router.include_router(file_api, prefix="/v1/files", tags=["Files"], dependencies=[Depends(verify_token)])
 
 # Transactions
-router.include_router(transaction_api, tags=["Transactions"], dependencies=[Depends(verify_token)])
+router.include_router(transaction_api, prefix="/v1/transactions", tags=["Transactions"],
+                      dependencies=[Depends(verify_token)])

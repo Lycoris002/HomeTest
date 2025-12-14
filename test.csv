@@ -1,0 +1,4 @@
+transaction_id,date,category,amount,currency
+TXN001,1/15/2025,electronics,150,USD
+TXN002,1/15/2025,groceries,45.5,USD
+TXN003,1/16/2025,electronics,299.99,USD
