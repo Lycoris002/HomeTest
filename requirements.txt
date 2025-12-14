@@ -6,3 +6,4 @@ typer
 dotenv
 psycopg==3.2.9
 psycopg-binary==3.2.9
+PyJWT==2.8.0

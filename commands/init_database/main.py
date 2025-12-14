@@ -1,5 +1,5 @@
-from app.models.sample_models import *
-from app.utils.db_utils import Base, get_database_url
+from app.models.data_models import *
+from utils.db_utils import Base, get_database_url
 
 from sqlalchemy import create_engine
 
