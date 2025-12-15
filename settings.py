@@ -11,6 +11,7 @@ def get_config(key: str, default: Optional[str] = None) -> Optional[str]:
 
 
 ### DEFAULT SETTINGS
+DB_TYPE = 'sqlite'
 POSTGRES_USER = get_config(key="POSTGRES_USER", default="user")
 POSTGRES_PASSWORD = get_config(key="POSTGRES_PASSWORD", default="password")
 POSTGRES_DB = get_config(key="POSTGRES_DB", default="database")

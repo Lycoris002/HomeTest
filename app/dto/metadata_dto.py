@@ -21,7 +21,7 @@ class FileUploadResponse(BaseModel):
 
 
 class FileMetadataResponse(BaseModel):
-    file_id: UUID
+    id: UUID
     filename: str
     size_bytes: int
     upload_time: datetime

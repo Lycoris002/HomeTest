@@ -90,7 +90,9 @@ async def list_files(db: AsyncSession = Depends(create_database_session)):
 
 @router.get("/{file_id}/summary", response_model=FileSummaryResponse)
 async def get_summary(file_id: UUID, db: AsyncSession = Depends(create_database_session)):
-    metadata = await db.get(FileMetadata, file_id)
+    metadata = await db.execute(
+        select(FileMetadata).where(FileMetadata.id == file_id)
+    )
     if not metadata:
         raise HTTPException(status_code=404, detail="File not found")
 
